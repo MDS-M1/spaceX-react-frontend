@@ -1,0 +1,19 @@
+FROM node:current-alpine3.16
+
+RUN mkdir /usr/src
+WORKDIR /usr/src
+
+ENV PATH /usr/src/node_modules/.bin:$PATH
+
+RUN addgroup --system security-execution-group
+RUN adduser --system user-private --ingroup security-execution-group
+RUN chown -R user-private:security-execution-group /usr/src
+
+COPY --chown=user-private:security-execution-group . /usr/src
+RUN yarn install --silent --frozen-lockfile
+
+USER root
+RUN npm install react-scripts@3.0.1 -g --silent 
+RUN npm install -g serve --save
+
+CMD ["npm", "run", "start:prod"]

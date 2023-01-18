@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  react:
+    container_name: spacex-app-prod
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.prod
+    image: spacex-app:prod
+    ports:
+      - "8080:80"
