@@ -1,9 +1,9 @@
 @import 'assets/css/colors.scss';
 
-.top {
+.top-homepage {
+  position: relative;
   background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0.52), rgb(0, 0, 0)),
   url('../../assets/img/fh_feature.webp');
-  object-fit: cover;
   height: 100vh;
   .content {
     position: absolute;
