@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
-}
+@import 'assets/css/colors.scss';
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.top-homepage {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0.52), rgb(0, 0, 0)),
+  url('../../assets/img/fh_feature.webp');
+  height: 100vh;
+  .content {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.stats {
+  padding: 50px 0;
+  .grid {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);		
+	  grid-template-rows: repeat(min-content, 6);
+    gap: 0 30px;
+    article {
+      padding: 20px;
+      border: 0.5px solid $white;
+      border-radius: 4px;
+      .stats-data {
+        min-width: 180px;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+    }
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.spacex {
+  padding: 50px 0;
+  p {
+    margin-bottom: 20px;
+  }
+  ul {
+    display: flex;
+    gap: 10px;
+    li {
+      border: 1px solid $white;
+      border-radius: 2px;
+      padding: 4px 10px;
+      &.full {
+        background-color: $white;
+        color: $black;
+        &:hover {
+          color: $white;
+          background-color: $black;
+        }
+      }
+    }
+  }
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+.landpads {
+  h2 {
+    width: 80%;
+    margin: 0 auto 40px auto;
+  }
+  ul {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y:visible;
+    gap: 20px;
+    padding: 0 30px 10px 0;
+    &::-webkit-scrollbar {
+      background-color: $black;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 50px;
+      border: 5px solid $black;
+      background-color: $white;
+      height: 5px;
+    }
+    li {
+      min-width: 300px;
+      border-radius: 4px;
+      overflow: hidden;
+      background-color: #EBFCFB;
+      color: $black;
+      box-shadow: 0px 0px 5px 0px rgba(252,250,249,0.39);
+      -webkit-box-shadow: 0px 0px 5px 0px rgba(252,250,249,0.39);
+      -moz-box-shadow: 0px 0px 5px 0px rgba(252,250,249,0.39);
+      figure {
+        height: 200px;
+        border-radius: 0 0 4px 4px;
+        overflow: hidden;
+        img {
+          object-fit: fill;
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .content {
+        padding: 15px 20px;
+        span {
+          color: $black;
+          opacity: .5;
+          font-size: .8rem;
+          line-height: 1rem;
+        }
+      }
+    }
   }
 }

@@ -1,0 +1,74 @@
+@import 'assets/css/colors.scss';
+
+.top-launch {
+  position: relative;
+  height: 40vh;
+  figure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(to bottom, rgba(20, 20, 20, 0.52), rgb(0, 0, 0));
+    }
+  }
+  h1 {
+    position: absolute;
+    width: 50%;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+.article-launch {
+  margin-top: 30px !important;
+  div {
+    margin-bottom: 60px;
+  }
+  table {
+    width: 100%;
+  }
+  table td, table th {
+    border: 1px solid #AAAAAA;
+    padding: 5px 15px;
+  }
+  table tr:nth-child(even) {
+    background: $white;
+    color: $black;
+  }
+  table thead th {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    li {
+      min-width: 200px;
+      figure {
+        height: 200px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  iframe {
+    border: none;
+    width: 100%;
+    height: 500px;
+  }
+}
