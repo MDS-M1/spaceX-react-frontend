@@ -75,7 +75,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="top">
+      <section className="top-homepage">
         <div className="content">
           <h1>Welcome on SpaceX data viewer</h1>
           <p>

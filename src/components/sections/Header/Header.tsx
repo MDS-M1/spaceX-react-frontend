@@ -6,13 +6,13 @@ import logo from 'assets/img/logo.svg';
 const Header = () => {
   return (
     <header>
-      <Link to="">Launches</Link>
-      <a href="/">
+      <Link to="/launches">Launches</Link>
+      <Link to="/">
         <figure>
           <img src={logo} alt="SpaceX logo" />
         </figure>
-      </a>
-      <Link to="">Capsules</Link>
+      </Link>
+      <Link to="/capsules">Capsules</Link>
     </header>
   );
 };
