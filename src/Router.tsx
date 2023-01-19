@@ -5,6 +5,7 @@ import { Navigate, useRoutes } from 'react-router-dom';
 import Home from 'views/Home/Home';
 import Launch from 'views/Launch/Launch';
 import Launches from 'views/Launches/Launches';
+import Capsules from 'views/Capsules/Capsules';
 
 const Router = () => {
   const mainRoutes = [
@@ -15,6 +16,7 @@ const Router = () => {
         { path: '', element: <Home /> },
         { path: 'launches', element: <Launches /> },
         { path: 'launch/:launchId', element: <Launch /> },
+        { path: 'capsules', element: <Capsules /> },
         { path: '404', element: <h1>Page not found</h1> },
       ],
     },
